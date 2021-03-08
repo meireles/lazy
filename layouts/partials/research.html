@@ -1,4 +1,4 @@
-{{ with .Site.Data.research.themes }}
+{{ with .Site.Data.research }}
 
 <section id="research" class="section">
 
@@ -7,16 +7,16 @@
 
       <div class="col-lg-12">
         <div class="text-center sectiontitle">
-          <h1>{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+          <h1>{{ with .sectiontitle }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
             {{ with .title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span></h1>
         </div>
       </div>
 
 
       <div class="row justify-content-center">
-        <p class="text-center"><b><i>We are interested in understanding how plant diversity arises and is maintained in face of environmental variability across space and time</i></b>. Our research focuses on four core areas and their interface: 1) uncovering the evolutionary relationships among species and populations using molecular tools, 2) understanding the spatial distribution of plant taxonomic and genetic diversity across scales, 3) inferring the evolution of plant physiology and functional attributes, and 4) detecting plant diversity using leaf reflectance spectra. Our group is part of the <a href="https://www.spectralbiology.org/">ASCEND Biology Integration Institute</a> and the <a href="https://umaine.edu/mcge/">Maine Center for Genetics in the Environment</a>.</p>
+        <p class="text-center"> {{ .content | safeHTML }} </p>
 
-        <h4 class="text-center pt-4">Projects</h4>
+        <h4 class="text-center pt-4"> {{ .title }} </h4>
 
         {{ range .theme}}
 
