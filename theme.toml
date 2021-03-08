@@ -1,0 +1,12 @@
+name = "Lazy"
+license = "MIT"
+licenselink = "https://github.com/meireles/lazy/blob/master/LICENSE"
+description = ""
+homepage = "https://github.com/meireles/lazy"
+tags = []
+features = []
+min_version = "0.54.0"
+
+[author]
+  name = "Jose Eduardo Meireles"
+  homepage = ""

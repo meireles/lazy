@@ -1,0 +1,36 @@
+<section class="footer" id="footer">
+  <div class="container">
+    <div class="row">
+          <div class="col-lg-4 col-md-4 col-xs-12">
+              <div class="contact-info">
+                <i class="fa fa-map-marked-alt" style="color:white;"></i>
+                <p class="pt-3">5735 Hitchner Hall, 347 / 368</p>
+                <p class="pt-0">School of Biology & Ecology, University of Maine</p>
+                <p class="pt-0">Orono, ME 04469</p>
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-xs-12">
+              <div class="contact-info">
+                <i class="fa fa-envelope" style="color:white;"></i>
+                <p class="pt-3">jose.meireles at maine.edu</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12">
+              <div class="contact-info">
+                <i class="fa fa-phone" style="color:white;"></i>
+                <p class="pt-3">(207) 581 2529</p>
+              </div>
+            </div>
+        </div>
+  </div>
+</section>
+
+
+
+{{ $customscript := resources.Get "js/script.js" }}
+<script src="{{ $customscript.Permalink }}"></script>
+
+{{ range .Site.Params.plugins.js}}
+  <script src="{{ .link | absURL }}"></script>
+{{ end }}

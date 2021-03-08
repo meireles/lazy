@@ -1,0 +1,13 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Site.Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {{ range .Site.Params.plugins.css }}
+    <link rel="stylesheet" href="{{ .link | absURL }} ">
+  {{ end }}
+
+  {{ $style := resources.Get "scss/style.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+</head>

@@ -1,0 +1,19 @@
+{{ with .Site.Data.join }}
+
+  <section id="join" class="join">
+    <div class="container">
+
+      <div class="text-center sectiontitle">
+        <h1> {{ .title }} </h1>
+      </div>
+
+      {{ range .theme}}
+
+      <h5>{{ .name }}</h5>
+      <p class="pb-2">{{ .content | safeHTML }}   </p>
+
+      {{end}}
+
+    </div>
+  </section>
+{{end}}

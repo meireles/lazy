@@ -1,0 +1,44 @@
+{{ with .Site.Data.research.themes }}
+
+<section id="research" class="section">
+
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-lg-12">
+        <div class="text-center sectiontitle">
+          <h1>{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+            {{ with .title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span></h1>
+        </div>
+      </div>
+
+
+      <div class="row justify-content-center">
+        <p class="text-center"><b><i>We are interested in understanding how plant diversity arises and is maintained in face of environmental variability across space and time</i></b>. Our research focuses on four core areas and their interface: 1) uncovering the evolutionary relationships among species and populations using molecular tools, 2) understanding the spatial distribution of plant taxonomic and genetic diversity across scales, 3) inferring the evolution of plant physiology and functional attributes, and 4) detecting plant diversity using leaf reflectance spectra. Our group is part of the <a href="https://www.spectralbiology.org/">ASCEND Biology Integration Institute</a> and the <a href="https://umaine.edu/mcge/">Maine Center for Genetics in the Environment</a>.</p>
+
+        <h4 class="text-center pt-4">Projects</h4>
+
+        {{ range .theme}}
+
+        <div class="col-lg-6 col-md-6 col-12 text-center">
+
+          <div class="card h-100 border-0">
+            <div class="card-body">
+              <h5 class="card-title research-meta">{{ .name }}</h5>
+
+              <a href="{{ .link }}">
+                <img src="{{ .image | absURL }}" class="card-img-top research-photo" alt="{{ .name }}">
+              </a>
+            </div>
+          </div>
+
+        </div>
+        {{ end }}
+
+      </div>
+
+
+    <!-- </div>
+  </div> -->
+</section>
+{{ end }}

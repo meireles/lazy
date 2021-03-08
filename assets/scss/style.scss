@@ -1,0 +1,33 @@
+@import 'variables';
+@import 'media-queries';
+@import 'navigation';
+@import 'typography';
+@import 'hero';
+@import 'team';
+@import 'footer';
+@import 'research';
+@import 'join';
+
+html{
+  background-color: $white;
+  scroll-behavior: smooth;
+
+  .sectiontitle{
+    padding-top: 30px + $brand-height;
+    padding-bottom: 50px;
+  }
+
+  body{
+    *{ line-height: 1.75; }
+    *{ font-family: $primary-font; }
+    * { margin:0; padding:0; }
+
+    h1 h2 h3 h4 h5{
+      font-weight: bold;
+      text-align: center;
+    }
+
+  }
+
+
+}

@@ -1,0 +1,25 @@
+<header class="navigation fixed-top" id="main_navigation">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <!-- logo -->
+      <a class="navbar-brand" href="#">
+        {{ .Site.Title }}
+        <!-- <img class="img" src="{{ .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}"> -->
+      </a>
+
+      <!-- hamburger -->
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation_items" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- items -->
+      <div class="collapse navbar-collapse text-center" id="navigation_items">
+        <ul class="navbar-nav ml-auto">
+          {{ range .Site.Menus.main }}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </nav>
+</header>

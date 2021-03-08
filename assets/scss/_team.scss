@@ -1,0 +1,38 @@
+.team {
+  background-color: $light-grey;
+}
+
+.social-link {
+    align-items: center;
+    justify-content: center;
+    color: $text-color;
+    transition: all 0.3s;
+    font-size: 1.4rem;
+
+    :hover,
+    :focus{
+      color: $secondary-color;
+    }
+}
+
+.member-photo{
+  opacity: 1;
+  :hover,
+  :focus{
+    opacity: 0.9;
+  }
+}
+
+.member-meta{
+  padding: 15px;
+  h5 {
+    margin: 0 0 5px;
+  }
+
+  p {
+    color: grey;
+    font-style: italic;
+    padding-top: 10px;
+  }
+
+}
